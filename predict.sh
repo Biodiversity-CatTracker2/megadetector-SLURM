@@ -44,7 +44,7 @@ for DIRECTORY in ${DIRECTORIES[*]}; do
 done
 #-------------------------------------
 for DIRECTORY in ${DIRECTORIES[*]}; do
-  rclone cop "${DIRECTORY}-with-detection-original" \
+  rclone copy "${DIRECTORY}-with-detection-original" \
     "$REMOTE":"${PARENT_DIRECTORY}/${DIRECTORY}-with-detection-original" \
     --drive-shared-with-me -P --stats-one-line --transfers 100
 done
